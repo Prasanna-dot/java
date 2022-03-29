@@ -323,7 +323,34 @@ public class basic{
                     break;
             }
           }
-         }
+        }
 ```
 
+## Group switch case statement
+``java
+import java.util.Scanner;
+public class basic{
+    public static void main(String args[]){
+        char a;
+        Scanner output = new Scanner(System.in);
+        System.out.println("Enter letter :");
+        a = output.next().charAt(0);
+        switch(a){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':         
+        System.out.println(a+" is vowel");
+        break;
+        default:
+        System.out.println(a+" is not vowel");
+        break;
+}}}
+```
 
