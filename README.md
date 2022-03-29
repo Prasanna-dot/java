@@ -327,7 +327,7 @@ public class basic{
 ```
 
 ## Group switch case statement
-``java
+```java
 import java.util.Scanner;
 public class basic{
     public static void main(String args[]){
