@@ -37,9 +37,9 @@ class basic{
     public static void main(String args[]){
          String name = "Prasanna venkatesh";
          int age = 21;
-         Float percentage = 78.7f;
+         float percentage = 78.7f;
          char gender = 'M';
-         Boolean married = false;
+         boolean married = false;
          System.out.println("name : " + name);
          System.out.println("age : " + age);
          System.out.println("percentage : " + percentage);
