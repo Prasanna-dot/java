@@ -354,3 +354,19 @@ public class basic{
 }}}
 ```
 
+## Factorial in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int f = 1;
+        for(int i=1;i<=n;i++){
+           f=f*i;
+        }
+        System.out.println(f);
+    }
+}
+```
