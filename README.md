@@ -6,6 +6,18 @@
 ## Install jdk
 #### Install JDK Click this link https://www.oracle.com/java/technologies/downloads/
 
+## JVM-JRE-JDK
+![New Project (2)](https://user-images.githubusercontent.com/83388298/161717436-7b3c45ba-a123-4c88-906a-df2334479c37.png)
+
+## Why we use class,public,static,void,main,string args[]
+
+### ``class`` : class keyword is used to declare classes in Java
+### ``public`` : It is an access specifier. Public means this function is visible to all.
+### ``static`` : static is again a keyword used to make a function static. To execute a static function you do not have to create an Object of the class. The main() method here is called by JVM, without creating any object for class.
+### ``void`` : It is the return type, meaning this function will not return anything.
+### ``main`` : main() method is the most important method in a Java program. This is the method which is executed, hence all the logic must be inside the main() method. If a java class is not having a main() method, it causes compilation error.
+### ``String args[]`` : This represents an array whose type is String and name is args. We will discuss more about array in Java Array section.
+
 ## Java basic program
 
 ```java
@@ -370,3 +382,220 @@ public class basic{
     }
 }
 ```
+
+## While - loop statement in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(),i = 1;
+        while(i<=n){
+           System.out.println(i);
+           i++;
+        }
+      }
+   }
+   ```
+   
+   ## Do - while loop statement in java
+   ```java
+import java.util.Scanner;
+
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(),i = 2;
+        do{
+           System.out.println(i);
+           i=i+2;
+        }while(i<=n);
+   }
+}
+```
+
+## For loop statement in java
+```java
+import java.util.Scanner;
+
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int i = 1;i<=n;i++){
+            System.out.println(i);
+        }
+   }
+}
+```
+
+## Break and continue statement in java
+```java
+public class basic {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            if(i==5)
+            continue;
+            System.out.println(i);
+            if(i==8)
+            break;
+        }
+    }
+}
+```
+
+## Enhanced for loop statement in java
+```java
+public class basic{
+    public static void main(String[] args){
+        String names[]={"Prasanna","Mukil","Madhan"};
+        for(String n : names){
+            System.out.println(n);
+        }
+   }}
+   ```
+## Nested for loop statement in java
+```java
+public class basic {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int w = 1; w <= 5; w++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+     }
+  }
+```
+
+## Factorial in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int f = 1;
+        for(int i=1;i<=n;i++){
+           f=f*i;
+        }
+        System.out.println(f);
+    }
+}
+```
+
+## Average of given n number in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int sum = 0,a;
+        for(int i=1;i<=n;i++){
+            System.out.println("Enter your value "+i+" :");
+            a = in.nextInt();
+            sum+=a;
+        }
+        System.out.println(sum/n);
+    }
+}
+```
+
+## Fibonacci Series in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your limit : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a = -1,b=1,c;
+        for(int i=1;i<=n;i++){
+            c=a+b;
+            System.out.println(c);
+            a=b;
+            b=c;
+        }
+    }
+}
+```
+
+## Reverse of n digit number in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your value : ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int reverse = 0, rem;
+        while(n!=0){
+            rem=n%10;
+            reverse = (reverse*10)+rem;
+            n=n/10;
+        }
+        System.out.println(reverse);
+    }
+}
+```
+
+## Armstrong Number in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        System.out.println("Enter your value : ");
+        Scanner in = new Scanner(System.in);
+        int number = in.nextInt();
+        int temp = number;
+        int d1,d2,d3;
+        d1 = temp%10;
+        temp = temp/10;
+        d2 = temp%10;
+        temp = temp/10;
+        d3 = temp%10;
+        temp=temp/10;
+        int result = (d1*d1*d1)+(d2*d2*d2)+(d3*d3*d3);
+        if(number == result){
+            System.out.println(number+" is armstrong number");
+        }else{
+            System.out.println(number+" is not armstrong number");
+        }
+    }
+ }
+ ```
+
+## Armstrong Number within 100 - 999 in java
+```java
+public class basic{
+    public static void main(String[] args){
+        int d1,d2,d3,temp,result;
+        for(int i=100; i<+999; i++){
+
+            temp = i;
+            d3 = temp%10;
+            temp = temp/10;
+   
+            d2 = temp%10;
+            temp = temp/10;
+   
+            d1 = temp%10;
+            result = (d1*d1*d1)+(d2*d2*d2)+(d3*d3*d3);
+           
+        if(i == result){
+            System.out.println(i+" is armstrong number");
+        }
+    }
+}
+}
+```
+
+
+
+
