@@ -596,6 +596,46 @@ public class basic{
 }
 ```
 
+## Find factors in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your number : ");
+        int n = in.nextInt();
+        for (int i = 1; i <= n; i++){
+            if(n%i==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
+
+## Find prime number in java
+```java
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your number : ");
+        int n = in.nextInt();
+        int f = 0;
+        for (int i = 1; i <= n; i++){
+            if(n%i==0){
+                f++;
+            }
+        }
+        if(f==2){
+            System.out.println(n +" is prime number");
+        }else{
+            System.out.println(n +" is not prime number");
+        }
+    }}
+```
+
+
 
 
 
