@@ -635,6 +635,58 @@ public class basic{
     }}
 ```
 
+## Find the given number is perfect number are not
+```java
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your number : ");
+        int n = in.nextInt();//6
+        int sum = 0;
+        for (int i = 1; i < n; i++){
+            if(n%i==0){
+                sum+=i;
+                System.out.println(sum);
+
+            }
+        }
+        if(sum==n){
+            System.out.println(n +" is perfect number");
+        }else{
+            System.out.println(n +" is not perfect number");
+    }
+  }
+ }
+ ```
+ 
+ ## Find the given number is strong number are not
+ ```java 
+import java.util.Scanner;
+public class basic{
+    public static void main(String[] args){
+        int num,orgnum,rem,factorial,sum=0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your number : ");
+        num = in.nextInt();
+        orgnum = num;
+        while(num>0){
+            rem=num%10;
+            factorial = 1;
+            for(int i = 1; i<=rem; i++){
+                factorial*=i;
+            }
+            sum+=factorial;
+            num=num/10;
+            }
+        if(sum==orgnum){
+            System.out.println(orgnum + " is a strong number");
+        }else{
+            System.out.println(orgnum + " is not a strong number");
+        }
+      }
+    }
+```
 
 
 
