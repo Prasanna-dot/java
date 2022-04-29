@@ -688,6 +688,175 @@ public class basic{
     }
 ```
 
+## Write a Java method to compute the future investment value at a given interest rate for a specified number of years. Sample data (Monthly compounded) and Output, 
+Input the investment amount: 1000, Input the rate of interest: 10, Input number of years: 5
+
+#### Expected Output:
+|Years  |  FutureValue|
+|------|------------|
+|1       |     1104.71|
+
+```java
+import java.lang.Math;
+
+public class compounded {
+    public static void main(String[] args) {
+
+        int investmentAmount = 1000;
+        double monthlyInterestRate = 0.00833;
+        int years = 1;
+
+       double result = investmentAmount * Math.pow((1 + monthlyInterestRate), years * 12);
+        System.out.println(result);
+    }
+}
+```
 
 
+# OOPS
+
+## Java single Inheritance
+```java
+package com.fwsa;
+public class madhan {
+    public void number(){
+        System.out.println("9791836225");
+    }
+}
+
+class mukil extends madhan{
+    public void name(){
+        System.out.println("Hello i am mukil");
+    }
+
+    public static void main(String args[]){
+        mukil obj = new mukil();
+        obj.number();
+        obj.name();
+    }
+}
+```
+
+## Java multilevel Inheritance
+```java
+package com.fwsa;
+
+public class madhan {
+
+    public void number(){
+        System.out.println("9791836225");
+    }
+}
+
+class mukil extends madhan{
+    public void from(){
+        System.out.println("Hello i am from thanjavur");
+    }
+}
+
+class prasanna extends mukil{
+    public void name(){
+        System.out.println("Hello I am prasanna");
+    }
+
+    public static void main(String args[]){
+        prasanna obj = new prasanna();
+        obj.number();
+        obj.name();
+        obj.from();
+    }
+}
+```
+
+## super Keyword in Inheritance
+```java
+package com.fwsa;
+
+public class madhan {
+
+    public void number(){
+        System.out.println("9791836225");
+    }
+    public void name(){
+        System.out.println("Hello I am madhan");
+    }
+}
+
+class mukil extends madhan{
+    public void from(){
+        System.out.println("Hello i am from thanjavur");
+    }
+}
+
+class prasanna extends mukil{
+    public void name(){
+        System.out.println("Hello I am prasanna");
+    }
+    public void from(){
+        super.from();
+        System.out.println("Hello i am from chennai");
+    }
+
+    public static void main(String args[]){
+        prasanna obj = new prasanna();
+        obj.number();
+        obj.name();
+        obj.from();
+    }
+}
+```
+
+## Java Abstract Class and Abstract Methods
+```java
+package com.fwsa;
+abstract class madhan {
+
+    abstract void number();
+    public void name(){
+        System.out.println("Hello I am madhan");
+    }
+}
+
+class mukil extends madhan{
+    public void number(){
+        System.out.println("My number is 9791836225");
+    }
+
+    public static void main(String args[]){
+        mukil obj = new mukil();
+        obj.number();
+        obj.name();
+    }
+}
+```
+
+## Java Interface
+
+```java
+package com.prasanna;
+
+interface sathish {
+    void relationship();
+    void meeting();
+}
+
+class Keerthi implements sathish {
+    @Override
+    public void relationship() {
+        System.out.println("we are friends");
+    }
+
+    public void meeting(){
+        System.out.println("we meat in college");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Keerthi obj = new Keerthi();
+        obj.relationship();
+        obj.meeting();
+    }
+}
+```
 
