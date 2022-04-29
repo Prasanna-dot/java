@@ -935,6 +935,53 @@ class Main {
 }
 ```
 
+## Java Polymorphism overriding
+```java
+package com.fwsa;
+
+public class poly {
+    public void Coffee() {
+        System.out.println("Coffee is too hot");
+    }
+}
+
+class curd extends poly {
+    public void Coffee() {
+        System.out.println("Coffee is too cool");
+    }
+
+    public static void main(String args[]) {
+        poly obj1 = new poly();
+        curd obj = new curd();
+        obj1.Coffee();
+        obj.Coffee();
+    }
+}
+```
+
+## Java Polymorphism Method Overloading
+```java
+package com.fwsa;
+
+public class poly {
+    public int Coffee( int number) {
+        System.out.println("My number is " + number );
+        return number;
+    }
+
+
+    public String Coffee(String name) {
+        System.out.println("My name is " + name );
+        return name;
+    }
+
+    public static void main(String args[]) {
+        poly obj1 = new poly();
+        obj1.Coffee(1836);
+    }
+}
+```
+
 ## Java Encapsulation
 ```java
 package com.fwsa;
