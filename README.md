@@ -712,6 +712,37 @@ public class compounded {
 }
 ```
 
+# Access modifier
+```java
+package com.fwsa;
+import java.lang.String;
+
+    class parent {
+        private int atm = 1234;
+        String name = "mukil";
+        protected String gen = "m";
+        
+        private int atmpin(){
+            return atm;
+        }
+
+        String na(){
+            return name;
+        }
+
+        public String gender(){
+            return gen;
+        }
+
+        public static void main(String args[]){
+            parent obj = new parent();
+
+            System.out.println(obj.atmpin());
+            System.out.println(obj.na());
+            System.out.println(obj.gender());
+        }
+    }
+  ```
 
 # OOPS
 
@@ -860,3 +891,76 @@ class Main {
 }
 ```
 
+## Multi interface
+```java
+package com.prasanna;
+
+interface sathish {
+    void relationship();
+    void meeting();
+}
+
+interface santhosh {
+    void number();
+    void name();
+}
+
+class Keerthi implements sathish, santhosh {
+    @Override
+    public void relationship() {
+        System.out.println("we are friends");
+    }
+
+    public void meeting(){
+        System.out.println("we meat in college");
+    }
+
+    public void number(){
+        System.out.println("My number is 9791836225");
+    }
+
+    public void name(){
+        System.out.println("My name is Prasanna");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Keerthi obj = new Keerthi();
+        obj.relationship();
+        obj.meeting();
+        obj.name();
+        obj.number();
+    }
+}
+```
+
+## Java Encapsulation
+```java
+package com.fwsa;
+import java.lang.String;
+
+public class userdata {
+    protected int phonenumber;
+    private String name;
+
+    public int setnumber(int phonenumber) {
+        return phonenumber;
+    }
+
+    public String getna(){
+        return name;
+    }
+
+    public void setna(String name){
+        this.name = name;
+    }
+
+    public static void main(String args[]){
+        userdata obj = new userdata();
+        obj.setna("Sam");
+
+        System.out.println(obj.setnumber(1234567890) + " " + obj.getna());
+    }
+}
+```
